@@ -1,6 +1,5 @@
 # Ignore .env file
 .env
-.env.prod
 
 # Ignore media files
 media/

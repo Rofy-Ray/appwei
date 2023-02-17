@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,9 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#jd2j!qj1m#4elddr4*+%q@fw&ju@i5=*&-$71mkmdkw2y98vh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://appwei.azurewebsites.net/']
+
+SECURE_SSL_REDIRECT = True
 
 
 # Application definition
@@ -128,17 +130,17 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # get the values for AZURE_STORAGE_CONNECTION_STRING and AZURE_STORAGE_CONTAINER_NAME
-AZURE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
-AZURE_STORAGE_CONTAINER_NAME = os.environ.get('AZURE_STORAGE_CONTAINER_NAME')
+# AZURE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
+# AZURE_STORAGE_CONTAINER_NAME = os.environ.get('AZURE_STORAGE_CONTAINER_NAME')
 
 # get the values for AZURE_TABLE_STORAGE_CONNECTION_STRING and AZURE_TABLE_STORAGE_TABLE_NAME
-AZURE_TABLE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_TABLE_STORAGE_CONNECTION_STRING')
-AZURE_TABLE_STORAGE_TABLE_NAME = os.environ.get('AZURE_TABLE_STORAGE_TABLE_NAME')
+# AZURE_TABLE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_TABLE_STORAGE_CONNECTION_STRING')
+# AZURE_TABLE_STORAGE_TABLE_NAME = os.environ.get('AZURE_TABLE_STORAGE_TABLE_NAME')

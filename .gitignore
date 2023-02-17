@@ -1,0 +1,11 @@
+# Ignore .env file
+.env
+
+# Ignore media files
+media/
+
+# Ignore static files
+# static/
+
+# Ignore database file
+db.sqlite3

@@ -1,0 +1,33 @@
+<!-- weiapp/templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block title %}WEI App{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <h1>WEI</h1>
+  <div class="row logo">
+    <img src="{% static 'images/weilogo.jpeg' %}" class="img-fluid img-thumbnail" alt="WEI App Logo" width="300">
+  </div>
+  <div class="row form">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="video">Select a video (5 seconds or less):</label>
+        <input type="file" class="form-control-file" id="video" name="video" accept="video/*" required>
+      </div>
+      <div class="form-group">
+        <label for="tags">Add up to 3 tags:</label>
+        <input type="text" name="tags" class="form-control" id="tags" placeholder="#tag1, #tag2, #tag3" required>
+      </div>
+      <button type="submit" class="btn upload-btn">Upload</button>
+    </form>
+    {% if messages %}
+      {% for message in messages %}
+          <div {% if message.tags %} class="alert alert-{{ message.tags }}" role="alert"{% endif %}>{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %} 

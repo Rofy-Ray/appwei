@@ -1,4 +1,4 @@
-# weiapp/urls.py
+# appwei/urls.py
 
 from django.urls import path
 from . import views

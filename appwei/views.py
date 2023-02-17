@@ -1,4 +1,4 @@
-# weiapp/views.py
+# appwei/views.py
 
 import os
 from django.shortcuts import render, redirect

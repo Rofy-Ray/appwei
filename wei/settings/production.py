@@ -23,3 +23,5 @@ AZURE_TABLE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_TABLE_STORAGE_CONN
 AZURE_TABLE_STORAGE_TABLE_NAME = os.environ.get('AZURE_TABLE_STORAGE_TABLE_NAME')
 
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+
+CSRF_TRUSTED_ORIGINS = ['appwei.azurewebsites.net']

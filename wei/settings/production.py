@@ -5,9 +5,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['appwei.azurewebsites.net', '20.40.202.15']
+ALLOWED_HOSTS = ['appwei.azurewebsites.net']
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 CSRF_COOKIE_SECURE = True
 

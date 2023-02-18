@@ -7,11 +7,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['appwei.azurewebsites.net']
 
-# SECURE_SSL_REDIRECT = True
-
 CSRF_COOKIE_SECURE = True
 
-SESSION_COOKIE_SECURE= True
+SESSION_COOKIE_SECURE = True
 
 # load environment variables from application settings
 load_dotenv()
